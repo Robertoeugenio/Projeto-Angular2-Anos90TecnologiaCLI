@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
-import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
+import { ListaClienteComponent } from './cliente-list/cliente-list.component';
 import { RountingModule } from './app.router';
 
 

@@ -21,7 +21,7 @@ export class ClienteListComponent implements OnInit {
       'endereco': 'Rua da China, 67, Centro',
       'cidade': 'Uberlandia',
       'cep': '38400-000',
-      'pais': 'Brasil',-
+      'pais': 'Brasil',
       'telefone': '3432323232',
       'fax': '3432322323'
     },
