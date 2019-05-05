@@ -4,7 +4,7 @@ export class Desenho {
      nomeDesenho: string;
      categoria: string;
      exibicao: string;
-     melhorEpisodio; string;
+     episodio; string;
      notas: string;
      piorDesenho: string;
 }
