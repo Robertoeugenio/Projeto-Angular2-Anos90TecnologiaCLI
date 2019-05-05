@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-import { ClienteListComponent } from './clientes/cliente-list/cliente-list.component';
+import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 
 
 const CLIENTES_ROUTES: Routes = [

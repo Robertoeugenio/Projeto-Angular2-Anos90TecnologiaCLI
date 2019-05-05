@@ -11,8 +11,8 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'clientes', 
-        loadChildren: 'app/clientes/clientes.module#ClientesModule'
+        path: 'desenhos', 
+        loadChildren: 'app/clientes/desenho.module#DesenhosModule'
     }
 
 ];
