@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Desenho } from '../desenho';
+import { DesenhosService } from '../desenhos.service';
 
 @Component({
   selector: 'app-desenho-list',
@@ -7,14 +8,20 @@ import { Desenho } from '../desenho';
   styleUrls: ['./desenho-list.component.css']
 })
 export class DesenhoListComponent implements OnInit {
+  desenho: Desenho[] = [];
 
-  constructor() { }
-
-  desenhos: Desenho[] [];  
+  criterio = String;
+  
+  constructor( private desenhoService: DesenhosService) { }
 
   ngOnInit() {
-      this.desenhos = [
-        {'codigo': 1,
+      this.desenhoService.getAll()
+         .subscribe(data => this.desenho  = data, err => {
+           alert ('Aconteceu um erro ! ');
+         });
+        }
+      
+     /*   {'codigo': 1,
         'nomeDesenho':'Coelho Ricochete',
         'categoria':  'comédia',
         'exibicao':'1995',
@@ -28,8 +35,6 @@ export class DesenhoListComponent implements OnInit {
        'piorDesenho':'Manda Chuva'},
     ]
 }
+}*/
+
 }
-
-  
-
-
