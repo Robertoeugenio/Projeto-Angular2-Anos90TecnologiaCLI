@@ -5,7 +5,7 @@
       <button type="button" click="pesquisar()" class="btn btn-warning">Pesquisar</button>
       <br> <br>
 
-      <form class="was-validated form-row">
+      <form class="was-validated form-row" #cadastro="ngForm"(ngSubmit) = "salvar()">
           <div class="col-md-1 mb-3">
             <label for="txtCodigo">C&oacute;digo</label>
             <input type="text" [(ng-model)]="desenhoAnimado.codigo" 
@@ -14,17 +14,17 @@
   
           <div class="col-md-4 mb-3">
             <label for="txtNomeDesenho">Nome do Desenho </label>
-            <input type="text" [(ng-model)]="desenhoAnimado.nomeDesenho" class="form-control is-valid"
-              name="txtNomeDesenho" required>
-            <div class="invalid-feedback">
+            <input type="text" [(ng-model)]="desenhoAnimado.nomeDesenho" 
+            class="form-control is-valid"  #nome="ngModel" name="nomeDesenho" minlength="5" required>
+          <div [hidden]= "nome.valid" class="invalid-feedback">
               Digite o nome do desenho animado.
             </div>
           </div>
   
           <div class="col-md-4 mb-3">
             <label for="txtCategoria">Categoria </label>
-            <input type="text" [(ng-model)]="desenhoAnimado.categoria" class="form-control is-valid" name="txtCategoria"
-              required>
+            <input type="text" [(ng-model)]="desenhoAnimado.categoria" 
+            class="form-control is-valid" #nome="ngModel" name="categoria" minlength="5" required>
             <div class="invalid-feedback">
               Digite a Categoria
             </div>
@@ -32,8 +32,8 @@
   
           <div class="col-md-2 mb-2">
             <label for="txtExibido">Ano de Exibição</label>
-            <input type="text" [(ng-model)]="desenhoAnimado.exibido" class="form-control is-valid"
-              name="txtExibido" required>
+            <input type="text" [(ng-model)]="desenhoAnimado.exibido" 
+            class="form-control is-valid" #nome= "ngModel" name="txtExibido" minlength="5" required>
             <div class="invalid-feedback">
               Digite ano de Exibição
             </div>
@@ -41,8 +41,8 @@
   
           <div class="col-md-3 mb-3">
             <label for="txtEpisodio">Melhor Episódio</label>
-            <input type="text" [(ng-model)]="desenhoAnimado.episodio" class="form-control is-valid"
-              name="txtEpisodio" required>
+            <input type="text" [(ng-model)]="desenhoAnimado.episodio" 
+            class="form-control is-valid" #nome= "ngModel" name="episodio" minlength="5" required>
             <div class="invalid-feedback">
               Digite o melhor episódio
             </div>
@@ -50,12 +50,13 @@
   
           <div class="col-md-2 mb-2">
             <label for="txtNotas">Notas </label>
-            <input type="text" [(ng-model)]="desenhoAnimado.notas" class="form-control is-valid" name="txtNotas" required>
+            <input type="text" [(ng-model)]="desenhoAnimado.notas" 
+            class="form-control is-valid"  #nome= "ngModel" name="notas" minlength= "5" required>
             <div class="invalid-feedback">
               Digite entre cinco e dez
             </div>
           </div>
-  
+  ---------------------------------------------------continuar embaixo
           <div class="col-md-2 mb-2">
             <label for="txtPiorDesenho"> Pior Desenho </label>
             <input type="text" [(ng-model)]="desenhoAnimado.piorDesenho" class="form-control is-valid" name="txtPiorDesenho"
