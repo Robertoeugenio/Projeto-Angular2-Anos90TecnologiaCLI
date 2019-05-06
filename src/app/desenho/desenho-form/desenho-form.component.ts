@@ -18,6 +18,7 @@ export class DesenhoFormComponent implements OnInit {
    private  subscription: Subscription;
 
   constructor( private route : ActivatedRoute,
+    private 
     private  desenhoService: DesenhosService) { }
      
   ngOnInit() {

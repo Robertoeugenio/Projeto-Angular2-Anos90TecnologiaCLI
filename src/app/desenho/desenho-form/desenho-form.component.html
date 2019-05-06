@@ -56,11 +56,11 @@
               Digite entre cinco e dez
             </div>
           </div>
-  ---------------------------------------------------continuar embaixo
+
           <div class="col-md-2 mb-2">
             <label for="txtPiorDesenho"> Pior Desenho </label>
-            <input type="text" [(ng-model)]="desenhoAnimado.piorDesenho" class="form-control is-valid" name="txtPiorDesenho"
-              required>
+            <input type="text" [(ng-model)]="desenhoAnimado.piorDesenho" 
+            class="form-control is-valid"  #nome= "ngModel" name="piorDesenho" minlength="5" required>
             <div class="invalid-feedback">
               Digite o pior Desenho
             </div>
