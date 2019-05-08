@@ -1,0 +1,23 @@
+<router-outlet></router-outlet>
+<div class="card border-secondary mb-3">
+  <div class="card-header"> Cadastro de Video Game </div>
+</div>
+
+<ul class="nav nav-tabs" id="videogameTab" role="tablist">
+  <li class=" nav-item">
+    <a class="nav-link active" id="cadastroTab" data-toggle="tab" href="#cadastro" aria-controls="tabCadastro"
+      aria-selected="true"> Cadastro de Video Game </a>
+  </li>
+
+</ul>
+<div class="tab-content " id="videogameTabContent">
+  <div class="tab-pane fase show active " id="cadastro" role="tabpanel" aria-labelledby="5" ; 
+  <app-videogame-form></app-videogame-form>
+  </div>
+  <div class="tab-pane fade" id="dados" role=tabDados arial-labelledby="5">
+    <div role="tabpanel" class="tab-pane" id="dados">
+      <app-videogame-list></app-videogame-list>
+    </div>
+  </div>
+</div>
+

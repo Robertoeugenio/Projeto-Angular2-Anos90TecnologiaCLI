@@ -4,17 +4,18 @@
       <button type="button" click="excluir()" class="btn btn-danger">Excluir</button>
       <button type="button" click="pesquisar()" class="btn btn-warning">Pesquisar</button>
       <br> <br>
-      
+
       <form class="was-validated form-row">
           <div class="col-md-1 mb-3">
             <label for="txtCodigo">C&oacute;digo</label>
-            <input type="text" ng-model="videogame.codigo" class="form-control" disabled id="txtCodigo">
+            <input type="text" ng-model="videogame.codigo" class="form-control"
+             name="txtCodigo">
           </div>
   
           <div class="col-md-4 mb-3">
-            <label for="txtNomeVideoGame">Nome do Console </label>
-            <input type="text" ng-model="videogame.nomeVideogame" class="form-control is-valid"
-              id="txtNomeVideoGame" required>
+            <label for="txtNomeVideoGame">Nome do Video Game  </label>
+            <input type="text" [(ng-model)]="videogame.nomeVideogame" class="form-control is-valid" #nome="ngModel"
+              name="NomeVideoGame" required>
             <div class="invalid-feedback">
               Digite o nome Video Game.
             </div>
@@ -22,7 +23,8 @@
   
           <div class="col-md-4 mb-3">
             <label for="txtNomeJogo">Nome do Melhor Jogo </label>
-            <input type="text" ng-model="videogame.nomeJogo" class="form-control is-valid" id="txtNomeJogo"
+            <input type="text" [(ng-model)]="videogame.nomeJogo" class="form-control is-valid" #nome="ngModel"
+            name="nomeJogo"
               required>
             <div class="invalid-feedback">
               Digite o nome do jogo.
@@ -32,7 +34,8 @@
   
           <div class="col-md-3 mb-3">
             <label for="txtCategoria">Categoria </label>
-            <input type="text" ng-model="videogame.categoria" class="form-control is-valid" id="txtCategoria"
+            <input type="text" [(ng-model)]="videogame.categoria" class="form-control is-valid" #nome="ngModel"
+            name="categoria"
               required>
             <div class="invalid-feedback">
               Digite a Categoria
@@ -41,8 +44,8 @@
   
           <div class="col-md-2 mb-2">
             <label for="txtAnoLancamento">Ano em que foi mais jogado</label>
-            <input type="text" ng-model="videogame.anoLancamento" class="form-control is-valid"
-              id="txtAnoLancamento" required>
+            <input type="text" [(ng-model)]="videogame.anoLancamento" class="form-control is-valid" #nome= "ngModel"
+            name="anoLancamento" required>
             <div class="invalid-feedback">
               Digite o Ano
             </div>
@@ -50,8 +53,7 @@
   
           <div class="col-md-3 mb-3">
             <label for="txtJogabilidade">Jogabilidade</label>
-            <input type="text" ng-model="videogame.jogabilidade" class="form-control is-valid"
-              id="txtJogabilidade" required>
+            <input type="text" [(ng-model)]="videogame.jogabilidade" class="form-control is-valid" #nome="ngModel" name="txtJogabilidade" required>
             <div class="invalid-feedback">
               Digite regular, bom ou Excelente
             </div>
@@ -59,7 +61,8 @@
   
           <div class="col-md-2 mb-2">
             <label for="txtNotas">Notas </label>
-            <input type="text" ng-model="videogame.notas" class="form-control is-valid" id="txtNotas" required>
+            <input type="text" [(ng-model)]="videogame.notas" class="form-control is-valid"  #nome= "ngModel"
+            name="notas" required>
             <div class="invalid-feedback">
               Digite entre cinco e dez
             </div>
@@ -67,7 +70,8 @@
   
           <div class="col-md-2 mb-2">
             <label for="txtPiorJogo"> Pior Jogo </label>
-            <input type="text" ng-model="videogame.piorJogo" class="form-control is-valid" id="txtPiorJogo"
+            <input type="text" [(ng-model)]="videogame.piorJogo" class="form-control is-valid"  #nome= "ngModel"
+            name="piorJogo"
               required>
             <div class="invalid-feedback">
               Digite o pior jogo
