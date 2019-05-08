@@ -1,0 +1,112 @@
+
+      <button type="button" click="novo()" class="btn btn-primary">Novo</button>
+      <button type="button" click="salvar()" class="btn btn-success">Salvar</button>
+      <button type="button" click="excluir()" class="btn btn-danger">Excluir</button>
+      <button type="button" click="pesquisar()" class="btn btn-warning">Pesquisar</button>
+      <br> <br>
+      
+      <form class="was-validated form-row">
+          <div class="col-md-1 mb-3">
+            <label for="txtCodigo">C&oacute;digo</label>
+            <input type="text" ng-model="videogame.codigo" class="form-control" disabled id="txtCodigo">
+          </div>
+  
+          <div class="col-md-4 mb-3">
+            <label for="txtNomeVideoGame">Nome do Console </label>
+            <input type="text" ng-model="videogame.nomeVideogame" class="form-control is-valid"
+              id="txtNomeVideoGame" required>
+            <div class="invalid-feedback">
+              Digite o nome Video Game.
+            </div>
+          </div>
+  
+          <div class="col-md-4 mb-3">
+            <label for="txtNomeJogo">Nome do Melhor Jogo </label>
+            <input type="text" ng-model="videogame.nomeJogo" class="form-control is-valid" id="txtNomeJogo"
+              required>
+            <div class="invalid-feedback">
+              Digite o nome do jogo.
+            </div>
+          </div>
+  
+  
+          <div class="col-md-3 mb-3">
+            <label for="txtCategoria">Categoria </label>
+            <input type="text" ng-model="videogame.categoria" class="form-control is-valid" id="txtCategoria"
+              required>
+            <div class="invalid-feedback">
+              Digite a Categoria
+            </div>
+          </div>
+  
+          <div class="col-md-2 mb-2">
+            <label for="txtAnoLancamento">Ano em que foi mais jogado</label>
+            <input type="text" ng-model="videogame.anoLancamento" class="form-control is-valid"
+              id="txtAnoLancamento" required>
+            <div class="invalid-feedback">
+              Digite o Ano
+            </div>
+          </div>
+  
+          <div class="col-md-3 mb-3">
+            <label for="txtJogabilidade">Jogabilidade</label>
+            <input type="text" ng-model="videogame.jogabilidade" class="form-control is-valid"
+              id="txtJogabilidade" required>
+            <div class="invalid-feedback">
+              Digite regular, bom ou Excelente
+            </div>
+          </div>
+  
+          <div class="col-md-2 mb-2">
+            <label for="txtNotas">Notas </label>
+            <input type="text" ng-model="videogame.notas" class="form-control is-valid" id="txtNotas" required>
+            <div class="invalid-feedback">
+              Digite entre cinco e dez
+            </div>
+          </div>
+  
+          <div class="col-md-2 mb-2">
+            <label for="txtPiorJogo"> Pior Jogo </label>
+            <input type="text" ng-model="videogame.piorJogo" class="form-control is-valid" id="txtPiorJogo"
+              required>
+            <div class="invalid-feedback">
+              Digite o pior jogo
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="tab-pane fade" id="dados" role="tabDados" aria-labelledby="dados-tab">
+        <div role="tabpanel" class="tab-pane" id="dados">
+          <input type="text" ng-model="criterio" class="form-control"
+            placeholder="O que voc&ecirc; est&aacute; procurando?" /><br />
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                  <th>C&oacute;digo</th>
+                  <th>Nome Video Game </th>
+                  <th>Nome Jogo</th>
+                  <th>Categoria</th>
+                  <th>Ano Lançamento</th>
+                  <th>Jogabilidade</th>
+                  <th>Notas</th>
+                  <th>Pior Jogo</th>
+  
+              </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="videogameTabela in videogames | filter:criterio"
+                ng-click="seleciona(videogameTabela)">
+                <td>{{videogameTabela.codigo}}</td>
+                <td>{{videogameTabela.nomeVideogame}}</td>
+                <td>{{videogameTabela.nomeJogo}}</td>
+                <td>{{videogameTabela.categoria}}</td>
+                <td>{{videogameTabela.anoLancamento}}</td>
+                <td>{{videogameTabela.jogabilidade}}</td>
+                <td>{{videogameTabela.notas}}</td>
+                <td>{{videogameTabela.piorJogo}}</td>
+  
+  
+              </tr>
+            </tbody>
+          </table>
+    

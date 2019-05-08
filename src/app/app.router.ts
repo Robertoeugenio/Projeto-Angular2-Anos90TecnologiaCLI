@@ -13,6 +13,14 @@ const routes: Routes = [
     {
         path: 'desenhos', 
         loadChildren: 'app/clientes/desenho.module#DesenhosModule'
+    },
+    {
+        path: 'videogames', 
+        loadChildren: 'app/clientes/videogames.module#VideogamesModule'
+    },
+    {
+        path: 'serieantigas', 
+        loadChildren: 'app/clientes/serieantiga.module#SerieantigasModule'
     }
 
 ];

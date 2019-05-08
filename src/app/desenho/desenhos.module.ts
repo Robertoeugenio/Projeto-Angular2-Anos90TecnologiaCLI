@@ -5,12 +5,13 @@ import { desenhosRouting } from './desenhos.routing';
 import { FormsModule } from '@angular/forms';
 import { DesenhosService } from './desenhos.service';
 import { DesenhoFormComponent } from './desenho-form/desenho-form.component';
+import { DesenhoCrudComponent } from './desenho-crud/desenho-crud.component';
 
 @NgModule({
   imports: [
     CommonModule, desenhosRouting, FormsModule
   ],
-  declarations: [DesenhoListComponent, DesenhoFormComponent],
+  declarations: [DesenhoListComponent, DesenhoFormComponent, DesenhoCrudComponent],
   providers: [DesenhosService]
 })
 export class DesenhosModule { }

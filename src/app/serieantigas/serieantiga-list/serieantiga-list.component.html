@@ -1,0 +1,29 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>C&oacute;digo</th>
+        <th>Nome da Série </th>
+        <th>Categoria</th>
+        <th>Ano de Exibição</th>
+        <th>O Que Você Mais gostava</th>
+        <th>Notas</th>
+        <th>Pior Série</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let serieantigaTabela of serieantigas"></tr>
+        <a [routerLink]= "[serieantigangTabela.codigo]" >
+       
+        <td>{{serieantigaTabela.codigo}}</td>
+        <td>{{serieantigaTabela.nomeSerie}}</td>
+        <td>{{serieantigaTabela.categoria}}</td>
+        <td>{{serieantigaTabela.exibido}}</td>
+        <td>{{serieantigaTabela.preferido}}</td>
+        <td>{{serieantigaTabela.notas}}</td>
+        <td>{{serieantigaTabela.piorSerie}}</td>
+
+
+      </tr>
+    </tbody>
+  </table>
