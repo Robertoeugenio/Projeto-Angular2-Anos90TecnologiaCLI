@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Videogame } from './videogame';
+import { Videogame } from './videogames';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
@@ -11,7 +11,7 @@ import { listenerCount } from 'cluster';
 @Injectable()
 export class VideogamesService {
 
-  private  url: string = 'http://localhost:8080/desenhos';
+  private  url: string = 'http://localhost:8080/videogames';
 
  videogamesChanged = new  EventEmitter<Observable<Videogame[]>>();
  
@@ -56,11 +56,11 @@ export class VideogamesService {
       .do(data => this.videogamesChanged.emit(this.getAll()))
       .catch(this.handleError);
     }
-     /*get (id : number ){
+     *get (id : number ){
       return this.getAll()
       .map(list: any) => list.find(videogame => videogame.codigo == id ))
       .catch(this.handleError);
-    } */
+    }
   }
 
   

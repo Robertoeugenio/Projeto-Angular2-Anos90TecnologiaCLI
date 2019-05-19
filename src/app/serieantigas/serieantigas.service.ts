@@ -11,8 +11,8 @@ import { listenerCount } from 'cluster';
 @Injectable()
 export class SerieantigasService {
 
-  private  url: string = 'http://localhost:8080/desenhos';
-  serieantiga
+  private  url: string = 'http://localhost:8080/serieantigas';
+  serieantigas
   serieantigasChanged = new  EventEmitter<Observable<Serieantiga[]>>();
  
 
@@ -56,11 +56,11 @@ export class SerieantigasService {
       .do(data => this.serieantigaChanged.emit(this.getAll()))
       .catch(this.handleError);
     }
-     /*get (id : number ){
+      get (id : number ){
       return this.getAll()
       .map(list: any) => list.find(serieantiga => serieantiga.codigo == id ))
       .catch(this.handleError);
-    } */
+    } 
   }
 
   

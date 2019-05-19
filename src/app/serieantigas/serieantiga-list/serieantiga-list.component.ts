@@ -8,7 +8,7 @@ import { SerieantigasService } from '../serieantigas.service';
   styleUrls: ['./serieantiga-list.component.css']
 })
 export class SerieantigaListComponent implements OnInit {
-  desenho: SerieAntiga[] = [];
+  serieantigas : SerieAntiga[] = [];
 
   criterio = String;
   serieantiga: any[];
@@ -22,22 +22,23 @@ export class SerieantigaListComponent implements OnInit {
          });
         }
       
-     /*   {'codigo': 1,
+       {'codigo': 1,
         'nomeSerie':'Jaspion',
         'categoria':  'aventura',
         'exibido':'1995',
-        'preferido': Jaspion versus Santagoss
+        'preferido': 'Jaspion versus Santagoss',
         'notas':'10',
         'piorSerie':'Lyon Man'}, 
       {'codigo': 2,
        'nomeSerie':'Changeman',
        'categoria':  'aventura',
        'exibido':'1997',
-       'preferido': 'Primeiro Episodio',
+       'preferido': 'criação do changeman',
        'notas':'9',
-       'piorSerie':'Shazan'}d,
+       'piorSerie':'Shazan'
+      },
     ]
 }
-}*/
+}
 
 }

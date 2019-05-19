@@ -56,11 +56,11 @@ export class DesenhosService {
       .do(data => this.desenhosChanged.emit(this.getAll()))
       .catch(this.handleError);
     }
-     /*get (id : number ){
+      get (id : number ){
       return this.getAll()
       .map(list: any) => list.find(desenho => desenho.codigo == id ))
       .catch(this.handleError);
-    } */
+    } 
   }
 
   }

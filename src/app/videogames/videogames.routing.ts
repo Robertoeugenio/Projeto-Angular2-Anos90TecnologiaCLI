@@ -4,9 +4,15 @@ import { VideogameFormComponent } from './videogame-form/videogame-form.componen
 import { VideogameCrudComponent } from './videogame-crud/videogame-crud.component';
 
 const VIDEOGAMES_ROUTEVIDES: Routes = [
- { path: '', component: VideogameCrudComponent},
-{ path: ':id',   component: VideogameFormComponent }
+    {
+        path: '',
+        component: VideogameCrudComponent
+    },
+    {
+        path: ':id',
+        component: VideogameFormComponent
+    }
 
 ];
 
-export const  videogamesRouting = RouterModule.forChild(VIDEOGAMES_ROUTES);
+export const videogamesRouting = RouterModule.forChild(VIDEOGAMES_ROUTES);

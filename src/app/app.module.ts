@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { RountingModule } from './app.router';
-import { DesenhoListComponent } from './desenho/desenho-list/desenho-list.component';
+import { DesenhoListComponent } from './desenhos/desenho-list/desenho-list.component';
 
 
 @NgModule({

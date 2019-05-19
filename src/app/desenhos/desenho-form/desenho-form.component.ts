@@ -69,7 +69,7 @@ export class DesenhoFormComponent implements OnInit {
         }
      }
      cancelar(){
-       this.router.navigate(['/clientes']);
+       this.router.navigate(['/desenhos']);
      }
    }
 

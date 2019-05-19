@@ -21,20 +21,22 @@ export class DesenhoListComponent implements OnInit {
          });
         }
       
-     /*   {'codigo': 1,
+        {'codigo': 1,
         'nomeDesenho':'Coelho Ricochete',
-        'categoria':  'comédia',
+        'categoria':  'comédia',     
         'exibicao':'1995',
+        'melhorEpisodio': 'duelo',
         'notas':'10',
         'piorDesenho':'gato Felix'}, 
       {'codigo': 2,
        'nomeDesenho':'Papaléguas',
        'categoria':  'aventura',
        'exibicao':'1997',
+       'melhorEpisodio': 'coiote com o foguete',
        'notas':'8',
-       'piorDesenho':'Manda Chuva'},
+       'piorDesenho':'Manda Chuva'};
     ]
 }
-}*/
+
 
 }

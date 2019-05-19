@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { videogame } from '../videogame';
+import { videogame } from '../videogames';
 import { VideogamesService } from '../videogames.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { VideogamesService } from '../videogames.service';
 })
 export class VideoGameListComponent implements OnInit {
   [x: string]: any;
-  videogame: Videogame[] = [];
+  videogame: Videogames[] = [];
 
   criterio = String;
   VideogamesService: any;
@@ -23,7 +23,7 @@ export class VideoGameListComponent implements OnInit {
          });
         }
       
-     /*   {'codigo': 1,
+        {'codigo': 1,
         'nomeVideogame':'Atari',
         'nomeJogo':'Pac Man',
         'categoria':  'estrategia',
@@ -41,6 +41,6 @@ export class VideoGameListComponent implements OnInit {
          'piorJogo':' Futebol Americano'}, 
     ]
 }
-}*/
+}
 
 }
