@@ -17,7 +17,7 @@ import { VideogameCrudComponent } from './videogame-crud/videogame-crud.componen
 export class VideogamesModule { }
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VideogameListComponent } from './videogame-list/videogame-list.component';
+import { VideoGameListComponent } from './videogame-list/videogame-list.component';
 import { videogamesRouting } from './videogames.routing';
 
 
