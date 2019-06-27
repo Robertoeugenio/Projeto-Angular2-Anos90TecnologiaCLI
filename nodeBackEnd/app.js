@@ -1,7 +1,7 @@
 const express = require('express'); // atualizado
 
 
-const PORT = 3000; 
+const PORT = 4000; 
 
 
 const app = express();
@@ -16,4 +16,4 @@ app.get("/clientes", (req, res) => {       //de acordo com slide
     )
 });
 
-app.listen(PORT, () => console.log("ESCUTANDO NA PORTA" + PORT));
+app.listen(PORT, () => console.log("escutando na porta" + PORT));
