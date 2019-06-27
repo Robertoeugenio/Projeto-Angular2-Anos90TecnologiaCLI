@@ -1,11 +1,10 @@
 const express = require('express'); // atualizado
 
-
 const PORT = 4000; 
-
 
 const app = express();
 
+app.set("json spaces",4);
 
 app.get("/clientes", (req, res) => {       //de acordo com slide
     res.json(
