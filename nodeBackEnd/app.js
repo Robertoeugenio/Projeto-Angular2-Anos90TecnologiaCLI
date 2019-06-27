@@ -4,8 +4,8 @@ const app = express();
 
 app.set("json spaces",4);
 
-const index = require('.routes/index');
-const clientes = require('.routes/clientes');
+const index = require('./routes/index');
+const clientes = require('./routes/clientes');
 
 app.use('/', index);
 app.use('/clientes', clientes);
