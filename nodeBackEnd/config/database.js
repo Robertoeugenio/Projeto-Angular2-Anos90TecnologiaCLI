@@ -10,5 +10,8 @@ let sequelize = new Sequelize('pds2', 'root', '', {
         idle: 10000
     },
 });
-sequelize.sync();
+sequelize.sync().then(function() {
+    console.log( " Parabéns sua Tabela criada com SUCESSO !!!");
+})
+
 module.exports = sequelize;

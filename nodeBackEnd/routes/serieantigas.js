@@ -1,16 +1,16 @@
 const express = require('express');
-const Cliente = require('../models/clientes');
+const Serieantiga = require('../models/serieantigas');
 const router = express.Router();
 
 router.get("/", (req,res) => 
-    Cliente.findAll()
+    Serieantiga.findAll()
         .then(result => res.json(result))
         .catch(error => {
             res.status(412).json({msg: error.message});
           }));
 
 router.get("/:id", (req, res) => {
-    Cliente.findOne({
+    Serieantiga.findOne({
         where: {
             codigo: req.params.id,
         }
@@ -32,15 +32,15 @@ router.get('/search/params', (req, res) => {
     var query = `%${req.query.nome}%`;
   
     console.log(query)
-    Cliente.findAll({ where: { nome: { [Op.like]: query } } })
-      .then(clientes => res.json(clientes))
+    Serieantiga.findAll({ where: { nome: { [Op.like]: query } } })
+      .then(serieantigas => res.json(serieantigas))
       .catch(err => console.log(err));
   });
   
 
 router.post('/', (req,res) => {
     console.log(req.body);
-    Cliente.create(req.body)
+    Serieantiga.create(req.body)
         .then(result => res.json(result))
         .catch(error => {
           res.status(412).json({msg: error.message});
@@ -48,7 +48,7 @@ router.post('/', (req,res) => {
     });    
     
 router.put('/', (req,res) => {
-    Cliente.update(req.body, { 
+    Serieantiga.update(req.body, { 
         where: {
         codigo: req.body.codigo
         }
@@ -60,7 +60,7 @@ router.put('/', (req,res) => {
     }); 
     
 router.delete("/:id", (req,res) => {
-    Cliente.destroy({
+    Serieantiga.destroy({
         where: {
             codigo: req.params.id
         }
